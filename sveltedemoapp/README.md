@@ -2,9 +2,9 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Description
+## Tutorial outline
 
-Demo project intended to illustrate the syntax of API calls in a simple Svelte 5 site. The full tutorial will cover the following:
+This demo project is intended to accompany a 10-minute video tutorial that teaches the syntax and best practices of API calls in a simple Svelte 5 site. The full tutorial will cover the following:
 
 * Starting a new Svelte 5 project
 * Basic HTML, CSS, and JavaScript implementation
