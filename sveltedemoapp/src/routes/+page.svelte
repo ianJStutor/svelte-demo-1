@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let affirmation = $state("Hello!");
+
+    async function getAffirmation() {
+        const response = await fetch("./");
+        const content = await response.json();
+        affirmation = content.affirmation;
+    }
+</script>
+
+<h1>{affirmation}</h1>
+<button on:click={getAffirmation}>Get new affirmation</button>
