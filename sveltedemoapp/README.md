@@ -1,38 +1,18 @@
-# create-svelte
+# API requests in Svelte 5
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Creating a project
+## Description
 
-If you're seeing this, you've probably already done this step. Congrats!
+Demo project intended to illustrate the syntax of API calls in a simple Svelte 5 site. The full tutorial will cover the following:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+* Starting a new Svelte 5 project
+* Basic HTML, CSS, and JavaScript implementation
+* The new <code>$scope</code> _rune_ of Svelte 5, not yet released but currently available in the preview version
+* CORS errors from front-end API calls
+* CORS solution with back-end API call and the <code>+server.js</code> file
+* TODO: using environment variables in Svelte to separate API keys from code base
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Author
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> [Ian Marshall](https://ianjstutor.github.io/ian-marshall/)
