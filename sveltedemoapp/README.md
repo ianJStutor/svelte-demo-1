@@ -11,7 +11,7 @@ This demo project is intended to accompany a 10-minute video tutorial that teach
 * The new <code>$scope</code> _rune_ of Svelte 5, not yet released but currently available in the preview version
 * CORS errors from front-end API calls
 * CORS solution with back-end API call and the <code>+server.js</code> file
-* TODO: using environment variables in Svelte to separate API keys from code base
+* using environment variables in Svelte to separate API keys from code base
 
 ## Author
 
