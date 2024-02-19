@@ -13,6 +13,10 @@ This demo project is intended to accompany a 10-minute video tutorial that teach
 * CORS solution with back-end API call and the <code>+server.js</code> file
 * using environment variables in Svelte to separate API keys from code base
 
+## Thoughts...
+
+* Svelte 5 hasn't been released yet, but it will be soon. This could mean that now is a perfect time for an entire Svelte course, one that incorporates all the new content. By the time the course is ready for deployment, Svelte 5 might be released. It's a bit risky because specs could change, yet Svelte is gaining a lot of traction in the dev community.
+
 ## Author
 
 > [Ian Marshall](https://ianjstutor.github.io/ian-marshall/)
