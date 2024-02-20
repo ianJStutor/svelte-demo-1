@@ -25,4 +25,31 @@ export function readOrders(userId) {
 export function readOrder(userId, orderId) {
     const user = ordersDB.get(userId);
     if (!user) return { err: "no user with that id" };
+    const order = user.get(orderId);
+    if (!order) return { err: "no order with that id" };
+    return { id: userId, orders: [order] };
+}
+
+export function updateOrder(userId, orderId, newOrder = {}) {
+    const user = ordersDB.get(userId);
+    if (!user) return { err: "no user with that id" };
+    const order = user.get(orderId);
+    if (!order) return { err: "no order with that id" };
+    order = Object.assign(order, newOrder);
+    user.set(orderId, order);
+    return readOrder(userId, orderId);
+}
+
+export function deleteOrder(userId, orderId) {
+    const user = ordersDB.get(userId);
+    if (!user) return { err: "no user with that id" };
+    if (!user.has(orderId)) return { err: "no order with that id" };
+    const deleted = user.delete(orderId);
+    return { id: userId, orders: [{ id: orderId, deleted }] };
+}
+
+export function deleteUser(userId) {
+    if (!ordersDB.has(userId)) return { err: "no user with that id" };
+    const deleted = ordersDB.delete(userId);
+    return { id: userId, deleted };
 }
