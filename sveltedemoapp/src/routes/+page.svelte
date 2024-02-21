@@ -1,11 +1,18 @@
 <script>
-    let affirmation = $state("Hello!");
+    let affirmation = $state("...");
 
     async function getAffirmation() {
         const response = await fetch("./api/");
         const content = await response.json();
         affirmation = content.affirmation;
     }
+
+    $effect(getAffirmation);
+
+    $effect(async () => {
+        const orders = await fetch("./api/demo/").then(r => r.json());
+        console.log(orders);
+    });
 </script>
 
 <style>
@@ -13,4 +20,4 @@
 </style>
 
 <h1>{affirmation}</h1>
-<button on:click={getAffirmation}>Get new affirmation</button>
+<button onclick={getAffirmation}>Get new affirmation</button>

@@ -53,3 +53,14 @@ export function deleteUser(userId) {
     const deleted = ordersDB.delete(userId);
     return { id: userId, deleted };
 }
+
+/**
+ * Seed with dummy data
+ */
+const demoUser = "demo";
+const demoOrder = {
+    item: "wool socks",
+    qty: 2
+};
+createUser(demoUser);
+createOrder(demoUser, demoOrder);
