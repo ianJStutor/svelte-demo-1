@@ -3,6 +3,7 @@
 
     async function getAffirmation() {
         const response = await fetch("./api/");
+        // const response = await fetch("https://www.affirmations.dev/");
         const content = await response.json();
         affirmation = content.affirmation;
     }
