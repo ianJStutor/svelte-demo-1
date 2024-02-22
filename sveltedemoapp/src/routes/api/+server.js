@@ -1,7 +1,7 @@
-import { json } from "@sveltejs/kit";
+import { APIKEY } from "$env/static/private";
+console.log(APIKEY);
 
-// import { APIKEY } from "$env/static/private";
-// console.log(APIKEY);
+import { json } from "@sveltejs/kit";
 
 export async function GET() {
     const response = await fetch("https://www.affirmations.dev/");

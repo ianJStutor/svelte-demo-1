@@ -1,5 +1,8 @@
 <script>
-    let affirmation = $state("...");
+    let { data } = $props();
+    console.log(data);
+
+    let affirmation = $state(data.affirmation);
 
     async function getAffirmation() {
         const response = await fetch("./api/");
@@ -8,12 +11,12 @@
         affirmation = content.affirmation;
     }
 
-    $effect(getAffirmation);
+    // $effect(getAffirmation);
 
-    $effect(async () => {
-        const orders = await fetch("./api/demo/").then(r => r.json());
-        console.log(orders);
-    });
+    // $effect(async () => {
+    //     const orders = await fetch("./api/demo/").then(r => r.json());
+    //     console.log(orders);
+    // });
 </script>
 
 <style>
