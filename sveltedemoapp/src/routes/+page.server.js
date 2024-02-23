@@ -3,3 +3,4 @@ export async function load({ fetch }) {
     const content = await response.json();
     return content;
 }
+

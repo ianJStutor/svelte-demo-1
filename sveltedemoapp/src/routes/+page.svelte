@@ -1,6 +1,5 @@
 <script>
     let { data } = $props();
-    console.log(data);
 
     let affirmation = $state(data.affirmation);
 
