@@ -6,6 +6,8 @@ export async function GET({ params }) {
     return json(orders);
 }
 
-export async function POST({ request, params }) {
+export async function POST({ request, cookies, params }) {
     const values = await request.formData();
+    const id = "new item id";
+    return json({ id }, { status: 201 });
 }
